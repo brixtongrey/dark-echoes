@@ -5,12 +5,12 @@
 }
 
 html {
-  color: white;
-  font-family: sans-serif;
+  color: #ffffff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-  background: #111;
+  background: #000080e7;
   padding: 1rem;
 }
 
@@ -26,6 +26,7 @@ main {
 }
 
 .episodes ol {
+    padding-top: 10px;
   list-style: none;
 }
 
@@ -35,8 +36,9 @@ main {
 
 .episodes li:hover,
 .episodes li.selected {
-  background: #333;
+  background: tan;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .episodes li:not(:last-child) {
@@ -51,4 +53,6 @@ main {
 
 button {
   padding: 0.25rem 0.5rem;
+  background-color: #d2b48c;
+  border-radius: 20px;
 }

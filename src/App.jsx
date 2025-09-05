@@ -1,8 +1,9 @@
+import {useState} from "react";
 import { episodeList } from "./data";
 
 function App() {
 
-  const [episodes] = useState(episodeList);
+  const [episodes] = useState(episodeList)
   const [selectedEpisode, setSelectedEpisode] = useState();
 
 
@@ -17,7 +18,7 @@ function App() {
         </>
       );
     }
-  }
+  
 
   return (
     <>
@@ -37,7 +38,7 @@ function EpisodeList() {
     <section className="episodes">
     <h2>Episodes</h2>
     <ol>
-      {episode.map((episode) => (
+      {episodes.map((episode) => (
     <li
     onClick={() => setSelectedEpisode(episode)}
     className={selectedEpisode?.id === episode.id ? "selected" : ""}
@@ -52,7 +53,19 @@ function EpisodeList() {
   );
 }
 
+return (
+  <>
+  <header>
+    <h1>Dark Echoes</h1>
+  </header>
+  <main>
+    <EpisodeList />
+    <EpisodeDetails />
+  </main>
+  </>
+);
 
+}
 
 export default App;
 
