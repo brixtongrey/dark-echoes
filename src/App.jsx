@@ -1,8 +1,8 @@
 import { episodeList } from "./data";
 
 function App() {
- 
-  const [episodes] = useState(null);
+
+  const [episodes] = useState(episodeList);
   const [selectedEpisode, setSelectedEpisode] = useState();
 
 
@@ -31,16 +31,26 @@ function App() {
   );
 }
 
-
-
-
-
-
-
-
-
-
-
+function EpisodeList() {
+  return (
+    <>
+    <section className="episodes">
+    <h2>Episodes</h2>
+    <ol>
+      {episode.map((episode) => (
+    <li
+    onClick={() => setSelectedEpisode(episode)}
+    className={selectedEpisode?.id === episode.id ? "selected" : ""}
+    key={episode.id}
+      >
+        {episode.title}
+      </li>
+      ))}
+    </ol>
+    </section>
+    </>
+  );
+}
 
 
 
