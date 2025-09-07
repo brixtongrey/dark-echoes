@@ -6,7 +6,8 @@
 
 html {
   color: #ffffff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 body {
@@ -26,7 +27,7 @@ main {
 }
 
 .episodes ol {
-    padding-top: 10px;
+  padding-top: 10px;
   list-style: none;
 }
 
